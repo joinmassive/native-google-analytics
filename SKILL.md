@@ -1,6 +1,19 @@
 ---
 name: google-analytics
 description: "Query Google Analytics 4 (GA4) data directly via the Analytics Data API. Use when you need website analytics like top pages, traffic sources, sessions, users, conversions, bounce rate, or any GA4 metrics and dimensions. Supports custom date ranges, filtering, and multi-metric queries. Calls analyticsdata.googleapis.com directly with no third-party proxy."
+metadata:
+  openclaw:
+    requires:
+      env:
+        - GA4_PROPERTY_ID
+        - GOOGLE_CLIENT_ID
+        - GOOGLE_CLIENT_SECRET
+        - GOOGLE_REFRESH_TOKEN
+      bins:
+        - python3
+    primaryEnv: GA4_PROPERTY_ID
+    files:
+      - "scripts/*"
 ---
 
 # Google Analytics 4
